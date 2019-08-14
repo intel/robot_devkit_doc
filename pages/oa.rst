@@ -23,9 +23,18 @@ default, backend of object detection is Intel® movidius ncs2.
 
 .. code:: bash
 
-   # Start OA demo with OpenVINO
-   source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 launch object_analytics_node object_analytics_with_openvino_sdk.launch.py
+    # source environment
+    source /opt/robot_devkit/robot_devkit_setup.bash
+
+    # launch realsense backend
+    ros2 launch realsense_ros2_camera rs.launch.py
+
+    # launch openvino backend
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/openvino/deployment_tools/inference_engine/samples/build/intel64/Release/lib
+    # export CPU_EXTENSION_LIB=/opt/intel/openvino/deployment_tools/inference_engine/samples/build/intel64/Release/lib/libcpu_extension.so
+    # export GFLAGS_LIB=/opt/intel/openvino/deployment_tools/inference_engine/samples/build/intel64/Release/lib/libgflags_nothreads.a
+    . /opt/intel/openvino/bin/setupvars.sh
+    ros2 launch dynamic_vino_sample ros2_openvino_oa.launch.py
 
 **OA demo video:**
 
