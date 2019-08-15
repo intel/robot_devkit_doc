@@ -49,13 +49,15 @@ infra1, infra2, pointcloud.
 
 - `/camera/depth/image_rect_raw`_
 
+- `/camera/aligned_depth_to_color/image_raw`_
+
 - `/camera/color/image_raw`_
 
 - `/camera/infra1/image_rect_raw`_
 
 - `/camera/infra2/image_rect_raw`_
 
-- `/camera/depth/color/points`_
+- `/camera/aligned_depth_to_color/color/points`_
 
 4. Known Issues
 ---------------
@@ -73,7 +75,8 @@ infra1, infra2, pointcloud.
 .. _RVIZ2: http://wiki.ros.org/rviz
 .. _here: https://yechun1.github.io/robot_devkit/rs_for_slam_nav
 .. _/camera/depth/image_rect_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
+.. _/camera/aligned_depth_to_color/image_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
 .. _/camera/color/image_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
 .. _/camera/infra1/image_rect_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
 .. _/camera/infra2/image_rect_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
-.. _/camera/depth/color/points: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/PointCloud2.msg
+.. _/camera/aligned_depth_to_color/color/points: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/PointCloud2.msg
