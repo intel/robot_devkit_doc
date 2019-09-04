@@ -12,16 +12,25 @@ with ROS2.
 
 \ **Start the camera node**\ 
 
+
+
 To start the camera node in ROS2, plug in the camera, then type the
 following command:
+
+Obtain the serial number of your device
+
+:: 
+
+   rs-enumerate-devices
+
+Change the corresponding yaml file with the specific serial number, e.g. for [d435.yaml](https://github.com/intel/ros2_intel_realsense/blob/refactor/realsense_ros/config/d435.yaml#L3) in line3:
+>serial_no: <serial_number_of_your_device> # d435
 
 ::
 
    source /opt/robot_devkit/robot_devkit_setup.bash
    # To launch with "ros2 run"
-   ros2 run realsense_ros2_camera realsense_ros2_camera
-   # OR, to invoke the executable directly
-   realsense_ros2_camera
+   ros2 run realsense_node realsense_camera_node __params:=~/robot_devkit/rdk_ws/perception_ws/src/intel/ros2_intel_realsense/realsense_ros/config/d435.yaml
 
 This will stream all camera sensors and publish on the appropriate ROS2
 topics. PointCloud2 is enabled by default.
@@ -32,7 +41,7 @@ topics. PointCloud2 is enabled by default.
 
    # in Terminal #1 launch realsense_ros2_camera
    source /opt/robot_devkit/robot_devkit_setup.bash
-   realsense_ros2_camera
+   ros2 run realsense_node realsense_camera_node __params:=~/robot_devkit/rdk_ws/perception_ws/src/intel/ros2_intel_realsense/realsense_ros/config/d435.yaml
    # in terminal #2 launch rviz2
    source /opt/robot_devkit/robot_devkit_setup.bash
    rviz2

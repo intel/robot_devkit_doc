@@ -27,8 +27,10 @@ default, backend of object detection is Intel® movidius ncs2.
     source /opt/robot_devkit/robot_devkit_setup.bash
 
     # launch realsense backend
-    ros2 launch realsense_ros2_camera rs.launch.py
-
+    # You should config the serial number before launch the camera folow https://intel.github.io/robot_devkit/pages/rs.html
+    source /opt/robot_devkit/robot_devkit_setup.bash
+    ros2 run realsense_node realsense_camera_node __params:=~/robot_devkit/rdk_ws/perception_ws/src/intel/ros2_intel_realsense/realsense_ros/config/d435.yaml
+    
     # launch openvino backend
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/openvino/deployment_tools/inference_engine/samples/build/intel64/Release/lib
     # export CPU_EXTENSION_LIB=/opt/intel/openvino/deployment_tools/inference_engine/samples/build/intel64/Release/lib/libcpu_extension.so

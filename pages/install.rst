@@ -42,14 +42,13 @@ Manual installation
    ./rdk.sh config --default                    # select a target product, default option is turtlebot3
    ./rdk.sh install-deps                        # install system dependences
    ./rdk.sh sync-src  --force                   # sync source code for selected packages
-   ./rdk.sh build --cmake-args -DCMAKE_BUILD_TYPE=Release
-                                                # build all ROS2 packges
+   ./rdk.sh build                               # build all ROS2 packges
    ./rdk.sh install                             # install generated ros2 to /opt/robot_devkit folder.
 
    # Remove ROS2 packages
    ./rdk.sh clean                               # remove build folders.
    ./rdk.sh uninstall                           # delete rdk_ws folder and uninstall generated ros2 from /opt/robot_devkit folder.
-
+                                                
 .. note:: The build workspace overlay will be like this:
 
     .. code:: bash
