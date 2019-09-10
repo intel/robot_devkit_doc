@@ -17,20 +17,12 @@ with ROS2.
 To start the camera node in ROS2, plug in the camera, then type the
 following command:
 
-Obtain the serial number of your device
-
-:: 
-
-   rs-enumerate-devices
-
-Change the corresponding yaml file with the specific serial number, e.g. for [d435.yaml](https://github.com/intel/ros2_intel_realsense/blob/refactor/realsense_ros/config/d435.yaml#L3) in line3:
->serial_no: <serial_number_of_your_device> # d435
-
 ::
-
    source /opt/robot_devkit/robot_devkit_setup.bash
    # To launch with "ros2 run"
-   ros2 run realsense_node realsense_camera_node __params:=~/robot_devkit/rdk_ws/perception_ws/src/intel/ros2_intel_realsense/realsense_ros/config/d435.yaml
+   ros2 run realsense_node realsense_camera_node
+   # Or use "ros2 launch"
+   ros2 launch realsense_examples rs_camera.launch.py
 
 This will stream all camera sensors and publish on the appropriate ROS2
 topics. PointCloud2 is enabled by default.
@@ -41,7 +33,7 @@ topics. PointCloud2 is enabled by default.
 
    # in Terminal #1 launch realsense_ros2_camera
    source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 run realsense_node realsense_camera_node __params:=~/robot_devkit/rdk_ws/perception_ws/src/intel/ros2_intel_realsense/realsense_ros/config/d435.yaml
+   ros2 launch realsense_examples rs_camera.launch.py
    # in terminal #2 launch rviz2
    source /opt/robot_devkit/robot_devkit_setup.bash
    rviz2
@@ -66,7 +58,7 @@ infra1, infra2, pointcloud.
 
 - `/camera/infra2/image_rect_raw`_
 
-- `/camera/aligned_depth_to_color/color/points`_
+- `/camera/pointcloud`_
 
 4. Known Issues
 ---------------
@@ -77,9 +69,7 @@ infra1, infra2, pointcloud.
 
 5. ToDo
 -------
-- A few features to be ported from the latest realsense_ros_camera v2.0.2
-    - RGB-D point cloud (depth_registered)
-    - Preset/Controls
+
 
 .. _RVIZ2: http://wiki.ros.org/rviz
 .. _here: https://yechun1.github.io/robot_devkit/rs_for_slam_nav
@@ -88,4 +78,4 @@ infra1, infra2, pointcloud.
 .. _/camera/color/image_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
 .. _/camera/infra1/image_rect_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
 .. _/camera/infra2/image_rect_raw: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/Image.msg
-.. _/camera/aligned_depth_to_color/color/points: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/PointCloud2.msg
+.. _/camera/pointcloud: https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/PointCloud2.msg

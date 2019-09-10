@@ -19,14 +19,16 @@ SLAM with cartographer requires laser scan data for robot pose estimation. Intel
 
    # In terminal 1, launch cartographer node
    ros2 launch realsense_ros rs_cartographer.launch.py
+
    # In terminal 2, launch Intel® RealSense™ D400 camera and T265 camera 
-   # You should config the serial number before launch the camera folow https://intel.github.io/robot_devkit/pages/rs.html
+   # You should config the serial number and tf in the launch file ros2_intel_realsense/realsense_examples/launch/rs_t265_and_d435.launch.py before launch the camera 
    source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 launch realsense_ros multi_cam.launch.py
-   # In terminal 3, launch the turtlebot3
+   ros2 launch realsense_examples rs_t265_and_d435.launch.py
+
+   # In terminal 3, launch the turtlebot3 for RealSense™ SLAM
    export TURTLEBOT3_MODEL=waffle
    source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 launch turtlebot3_bringup robot.launch.py
+   ros2 launch realsense_examples tb3_robot.launch.py
 
    # In terminal 4, launch the teleoperation node for robot
    source /opt/robot_devkit/robot_devkit_setup.bash
@@ -57,7 +59,7 @@ Generally, In order to navigation with the map from SLAM with RealSense™, the 
    # In terminal 1
    export TURTLEBOT3_MODEL=waffle
    source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 launch turtlebot3_bringup robot.launch.py
+   ros2 launch realsense_examples tb3_robot.launch.py
 
 \ **Start ROS2 realsense and depth image to laser scan**\ 
 
@@ -65,7 +67,7 @@ Generally, In order to navigation with the map from SLAM with RealSense™, the 
 
    # In terminal 2
    source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 launch realsense_ros multi_cam.launch.py
+   ros2 launch realsense_ros rs_nav.launch.py
 
 \ **Read and distribute map with map server**\ 
 
@@ -81,13 +83,15 @@ Generally, In order to navigation with the map from SLAM with RealSense™, the 
 
    # In terminal 5
    export TURTLEBOT3_MODEL=waffle
-   ros2 launch turtlebot3_navigation2 navigation2.launch.py map:=${HOME}/map.yaml
+   ros2 launch nav2_bringup nav2_bringup_launch.py map:=<full/path/to/map.yaml>
+
+   # In terminal6
+   ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launch/nav2_default_view.rviz
+
 
 Finally, please give an initial pose and goal within RVIZ2 to direct and navigate the turtlebot3 with the running map.
 
 4. Known issues
 ---------------
-
-* The accuracy of RealSense™ depth depends on the detection distance and the quality may not good enough to build a big map, it drifts the map building.
 
 * Keep the RealSense™ parallel to the ground, or the tilt of the RealSense™ may influence the SLAM.

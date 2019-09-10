@@ -24,7 +24,7 @@ real-time object analyses over RGB-D camera inputs, enabling ROS
 developer to easily create amazing robotics advanced features, like
 intelligent collision avoidance and semantic SLAM.
 
-`ros2_openvino_toolkit <https://github.com/intel/ros2_openvino_toolkit>`_ 
+`ros2_openvino_toolkit <https://github.com/intel/ros2_openvino_toolkit>`_
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 The OpenVINO™ toolkit quickly deploys applications and solutions that
