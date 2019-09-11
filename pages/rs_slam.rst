@@ -18,7 +18,7 @@ SLAM with cartographer requires laser scan data for robot pose estimation. Intel
 .. code:: bash
 
    # In terminal 1, launch cartographer node
-   ros2 launch realsense_ros rs_cartographer.launch.py
+   ros2 launch realsense_examples rs_cartographer.launch.py
 
    # In terminal 2, launch Intel® RealSense™ D400 camera and T265 camera 
    # You should config the serial number and tf in the launch file ros2_intel_realsense/realsense_examples/launch/rs_t265_and_d435.launch.py before launch the camera 
@@ -83,7 +83,7 @@ Generally, In order to navigation with the map from SLAM with RealSense™, the 
 
    # In terminal 5
    export TURTLEBOT3_MODEL=waffle
-   ros2 launch nav2_bringup nav2_bringup_launch.py map:=<full/path/to/map.yaml>
+   ros2 launch nav2_bringup nav2_bringup_launch.py map:=~/map.yaml
 
    # In terminal6
    ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launch/nav2_default_view.rviz
