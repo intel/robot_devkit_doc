@@ -1,10 +1,6 @@
 RealSense™ for SLAM and Navigation
 ==================================
 
-.. warning::
-
-   To be updated base on turtlebot3 readiness for dashing release.
-
 1. Overview
 -----------
 
@@ -13,17 +9,28 @@ SLAM with cartographer requires laser scan data for robot pose estimation. Intel
 2. SLAM with RealSense™
 ------------------------
 
+\ **Install dependencies**\
+
+.. code:: bash
+
+    source /opt/robot_devkit/robot_devkit_setup.bash
+    mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
+    git clone https://github.com/ros-perception/depthimage_to_laserscan -b dashing-devel
+    cd .. && colcon build
+    source ~/ros2_ws/install/local_setup.bash
+
 \ **Start to SLAM**\ 
 
 .. code:: bash
 
    # In terminal 1, launch cartographer node
+   source ~/ros2_ws/install/local_setup.bash
    ros2 launch realsense_examples rs_cartographer.launch.py
 
    # In terminal 2, launch Intel® RealSense™ D400 camera and T265 camera 
-   # You should config the serial number and tf in the launch file ros2_intel_realsense/realsense_examples/launch/rs_t265_and_d435.launch.py before launch the camera 
+   # You should config the serial number and tf in the launch file ros2_intel_realsense/realsense_examples/launch/rs_t265_and_d400.launch.py before launch the camera 
    source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 launch realsense_examples rs_t265_and_d435.launch.py
+   ros2 launch realsense_examples rs_t265_and_d400.launch.py
 
    # In terminal 3, launch the turtlebot3 for RealSense™ SLAM
    export TURTLEBOT3_MODEL=waffle
@@ -41,6 +48,7 @@ Control and move the turtlebot3 with keyboard to build map, and when the map bui
 
    # In terminal 5
    source /opt/robot_devkit/robot_devkit_setup.bash
+   source /opt/ros/dashing/local_setup.bash
    ros2 run nav2_map_server map_saver -f ~/map
 
 Next, try to open and preview the map.pgm to confirm it. The following is a map built with RealSense™ and cartographer:
@@ -67,25 +75,20 @@ Generally, In order to navigation with the map from SLAM with RealSense™, the 
 
    # In terminal 2
    source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 launch realsense_ros rs_nav.launch.py
-
-\ **Read and distribute map with map server**\ 
-
-.. code:: bash
-
-   # In terminal 4
-   source /opt/robot_devkit/robot_devkit_setup.bash
-   ros2 run nav2_map_server map_server -f ~/map
+   source ~/ros2_ws/install/local_setup.bash
+   ros2 launch realsense_examples rs_nav.launch.py
 
 \ **Start the navigation2 stack with the map**\ 
 
 .. code:: bash
 
-   # In terminal 5
+   # In terminal 3
    export TURTLEBOT3_MODEL=waffle
-   ros2 launch nav2_bringup nav2_bringup_launch.py map:=~/map.yaml
+   source /opt/ros/dashing/local_setup.bash
+   ros2 launch nav2_bringup nav2_bringup_launch.py map:=$HOME/map.yaml
 
-   # In terminal6
+   # In terminal 4
+   source /opt/ros/dashing/local_setup.bash
    ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launch/nav2_default_view.rviz
 
 

@@ -14,6 +14,8 @@ Hardware Requirements
 
 -  Intel® `RealSense™ D400 Series`_\
 
+-  Intel® `RealSense™ T265`_\
+
 Software Requirements
 ---------------------
 -  We support Ubuntu Linux 18.04 (Bionic Beaver) on 64-bit. We do not
@@ -92,6 +94,7 @@ Then you can follow the `ROS2 official document`_ to create and build your own p
 .. _Turtlebot3 Waffle: http://www.robotis.us/turtlebot-3-waffle-pi/
 .. _Movidius™ Neural Compute Stick 2: https://software.intel.com/en-us/neural-compute-stick
 .. _RealSense™ D400 Series: https://www.intel.com/content/www/us/en/architecture-and-technology/realsense-overview.html
+.. _RealSense™ T265: https://www.intel.com/content/www/us/en/architecture-and-technology/realsense-overview.html
 .. _ADLink Neuron Board: https://neuron.adlinktech.com/en/
 .. _Robot DevKit: https://github.com/intel/robot_devkit
 .. _ROS2 official document: https://index.ros.org/doc/ros2/Tutorials/Colcon-Tutorial/

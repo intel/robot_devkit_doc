@@ -4,7 +4,7 @@ Intel® RealSense™
 1. Overview
 -----------
 
-These are packages for using Intel® RealSense™ cameras (D400 series)
+These are packages for using Intel® RealSense™ cameras (D400 series and T265)
 with ROS2.
 
 2. Running the demo
@@ -17,7 +17,8 @@ with ROS2.
 To start the camera node in ROS2, plug in the camera, then type the
 following command:
 
-::
+.. code:: bash
+
    source /opt/robot_devkit/robot_devkit_setup.bash
    # To launch with "ros2 run"
    ros2 run realsense_node realsense_node

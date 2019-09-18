@@ -12,7 +12,7 @@ Key Packages
 `ros2_intel_realsense <https://github.com/intel/ros2_intel_realsense>`_
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-ros2_intel_realsense for using Intel® RealSense™ cameras (D400 series)
+ros2_intel_realsense for using Intel® RealSense™ cameras (D400 series and T265)
 with ROS2.
 
 `ros2_object_analytics <https://github.com/intel/ros2_object_analytics>`_
