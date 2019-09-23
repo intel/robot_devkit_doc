@@ -75,7 +75,7 @@ Edit installed component (ros2_intel_realsense for example)
 
     source /opt/robot_devkit/robot_devkit_setup.bash
     cd ~/robot_devkit/rdk_ws/perception_ws
-    colcon build --symlink-install --base-paths src/ros2_intel_realsense
+    colcon build --symlink-install --base-paths src/intel/ros2_intel_realsense
     source install/local_setup.bash
 
 Create a new project
