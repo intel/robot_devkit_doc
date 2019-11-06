@@ -89,7 +89,7 @@ Generally, In order to navigation with the map from SLAM with RealSense™, the 
 
    # In terminal 4
    source /opt/ros/dashing/local_setup.bash
-   ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launch/nav2_default_view.rviz
+   ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/launch/nav2_default_view.rviz
 
 
 Finally, please give an initial pose and goal within RVIZ2 to direct and navigate the turtlebot3 with the running map.

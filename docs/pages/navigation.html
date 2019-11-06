@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Navigation2 &mdash; Intel ROS Tutorial 0.2.0 documentation</title>
+  <title>Navigation2 &mdash; Intel ROS Tutorial 0.3.0 documentation</title>
   
 
   
@@ -23,7 +23,7 @@
       <script type="text/javascript">
           var DOCUMENTATION_OPTIONS = {
               URL_ROOT:'../',
-              VERSION:'0.2.0',
+              VERSION:'0.3.0',
               LANGUAGE:'None',
               COLLAPSE_INDEX:false,
               FILE_SUFFIX:'.html',
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.3.0
               </div>
             
           
@@ -97,7 +97,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rs.html">Intel® RealSense™</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rs.html">RealSense™ Camera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vino.html">OpenVINO™ Toolkit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oa.html">Object Analytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM with Lidar</a></li>
@@ -119,6 +119,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rs_slam.html">RealSense™ for SLAM and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_lib.html">Grasp Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lic.html">Copyright 2018 Intel® Corporation</a></li>
 </ul>
 
@@ -221,7 +223,7 @@ navigation2 applications.</p>
 <p><strong>Terminal 1: Config turtlebot3 and Gazebo simulation environment</strong></p>
 <p>Example: See <a class="reference external" href="https://github.com/ROBOTIS-GIT/turtlebot3_simulations/tree/ros2/turtlebot3_gazebo/models">turtlebot3_gazebo models</a> for details.</p>
 <div class="code bash highlight-default"><div class="highlight"><pre><span></span>source /opt/robot_devkit/robot_devkit_setup.bash
-echo export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:`ros2 pkg prefix turtlebot3_simulations`/turtlebot3_gazebo/models/ &gt;&gt; ~/.bashrc
+echo export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:`ros2 pkg prefix turtlebot3_gazebo`/models/ &gt;&gt; ~/.bashrc
 echo export TURTLEBOT3_MODEL=waffle &gt;&gt; ~/.bashrc
 echo ROS_DOMAIN_ID=30 &gt;&gt; ~/.bashrc
 </pre></div>
@@ -236,10 +238,10 @@ echo ROS_DOMAIN_ID=30 &gt;&gt; ~/.bashrc
 </div>
 <p><strong>Terminal 3: Launch navigation2</strong></p>
 <div class="code bash highlight-default"><div class="highlight"><pre><span></span>source /opt/robot_devkit/robot_devkit_setup.bash
-source /ros/dashing/local_setup.bash
+source /opt/ros/dashing/local_setup.bash
 # Launch the nav2 system
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True autostart:=True \
-map:=`ros2 pkg prefix turtlebot3_navigation2`/share/turtlebot3_navigation2/map/map.yaml
+map:=`ros2 pkg prefix turtlebot3_navigation2`/map/map.yaml
 </pre></div>
 </div>
 <div class="admonition note">
@@ -281,7 +283,7 @@ map:=`ros2 pkg prefix turtlebot3_navigation2`/share/turtlebot3_navigation2/map/m
 </pre></div>
 </div>
 <p><strong>Terminal 3: Run RVIZ</strong></p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span>ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launch/nav2_default_view.rviz
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span>ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/launch/nav2_default_view.rviz
 </pre></div>
 </div>
 <p><strong>In RVIZ2:</strong></p>

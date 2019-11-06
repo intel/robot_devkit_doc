@@ -1,4 +1,4 @@
-Intel® RealSense™
+RealSense™ Camera
 =================
 
 1. Overview
@@ -41,6 +41,14 @@ topics. PointCloud2 is enabled by default.
 
 This will launch `RVIZ2`_ and display the five streams: color, depth,
 infra1, infra2, pointcloud.
+
+
+.. note:: 
+
+    There are two coordinates in the package, one represents the space coordinate and the other represents the image coordinate:
+
+.. image:: ../imgs/coordinate_systems.png
+
 
 **Realsense can also support SLAM and navigation, see** \ `here`_\ **.**
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Copyright 2018 Intel® Corporation &mdash; Intel ROS Tutorial 0.3.0 documentation</title>
+  <title>Grasp Library &mdash; Intel ROS Tutorial 0.3.0 documentation</title>
   
 
   
@@ -45,7 +45,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Tools" href="tools.html" /> 
+    <link rel="next" title="Tools" href="tools.html" />
+    <link rel="prev" title="RealSense™ for SLAM and Navigation" href="rs_slam.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,9 +103,9 @@
 <li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM with Lidar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rs_slam.html">RealSense™ for SLAM and Navigation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="grasp_lib.html">Grasp Library</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Grasp Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Copyright 2018 Intel® Corporation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lic.html">Copyright 2018 Intel® Corporation</a></li>
 </ul>
 
             
@@ -150,13 +151,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Copyright 2018 Intel® Corporation</li>
+      <li>Grasp Library</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/pages/lic.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/pages/grasp_lib.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -169,13 +170,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="copyright-2018-intel-corporation">
-<h1>Copyright 2018 Intel® Corporation<a class="headerlink" href="#copyright-2018-intel-corporation" title="Permalink to this headline">¶</a></h1>
-<p>Licensed under the Apache License, Version 2.0 (the “License”); you may not use this project except in compliance with the License. You may obtain a copy of the License at</p>
-<p><em>http://www.apache.org/licenses/LICENSE-2.0</em></p>
-<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
-<p><em>Other names and brands may be claimed as the property of others.</em></p>
-<p><strong>Any security issue should be reported using process at https://01.org/security.</strong></p>
+  <div class="section" id="grasp-library">
+<h1>Grasp Library<a class="headerlink" href="#grasp-library" title="Permalink to this headline">¶</a></h1>
+<p>ROS2 Grasp Library consists of:</p>
+<ul class="simple">
+<li>A ROS2 Grasp Planner providing grasp planning service, as an extensible capability of <a class="reference external" href="https://github.com/intel/ros2_grasp_library">MoveIt Grasp Planning</a></li>
+<li>A ROS2 Grasp Detector interface, enabled with the specific back-end algorithm <a class="reference external" href="https://github.com/atenpas/gpd">GPD</a> with Intel® <a class="reference external" href="https://software.intel.com/en-us/openvino-toolkit">OpenVINO</a> technology</li>
+<li>Hand-eye calibration generating transformation from camera frame to a specified target frame; Grasp translation to the MoveIt <a class="reference external" href="http://docs.ros.org/api/moveit_msgs/html/msg/Grasp.html">Grasp Message</a></li>
+<li>Robot interfaces controlling the physical robot to move, pick, place, as well as to feedback robot states</li>
+<li>Grasp applications demonstrating the grasp planning capabilities, and telling how to put all the above software components together for intelligent visual manipulation tasks</li>
+</ul>
+<p>For details, please refer to <a class="reference external" href="https://intel.github.io/ros2_grasp_library">ROS2 Grasp Library Tutorial</a>.</p>
 </div>
 
 
@@ -186,8 +191,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="tools.html" class="btn btn-neutral float-right" title="Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="tools.html" class="btn btn-neutral float-left" title="Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="rs_slam.html" class="btn btn-neutral float-left" title="RealSense™ for SLAM and Navigation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Intel® RealSense™ &mdash; Intel ROS Tutorial 0.2.0 documentation</title>
+  <title>RealSense™ Camera &mdash; Intel ROS Tutorial 0.3.0 documentation</title>
   
 
   
@@ -23,7 +23,7 @@
       <script type="text/javascript">
           var DOCUMENTATION_OPTIONS = {
               URL_ROOT:'../',
-              VERSION:'0.2.0',
+              VERSION:'0.3.0',
               LANGUAGE:'None',
               COLLAPSE_INDEX:false,
               FILE_SUFFIX:'.html',
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.3.0
               </div>
             
           
@@ -97,7 +97,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Intel® RealSense™</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RealSense™ Camera</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-the-demo">2. Running the demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#key-interfaces">3. Key Interfaces</a></li>
@@ -110,6 +110,8 @@
 <li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM with Lidar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rs_slam.html">RealSense™ for SLAM and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_lib.html">Grasp Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lic.html">Copyright 2018 Intel® Corporation</a></li>
 </ul>
 
@@ -156,7 +158,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Intel® RealSense™</li>
+      <li>RealSense™ Camera</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,8 +177,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="intel-realsense">
-<h1>Intel® RealSense™<a class="headerlink" href="#intel-realsense" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="realsense-camera">
+<h1>RealSense™ Camera<a class="headerlink" href="#realsense-camera" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>These are packages for using Intel® RealSense™ cameras (D400 series and T265)
@@ -207,6 +209,11 @@ topics. PointCloud2 is enabled by default.</p>
 </div>
 <p>This will launch <a class="reference external" href="http://wiki.ros.org/rviz">RVIZ2</a> and display the five streams: color, depth,
 infra1, infra2, pointcloud.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are two coordinates in the package, one represents the space coordinate and the other represents the image coordinate:</p>
+</div>
+<img alt="../_images/coordinate_systems.png" src="../_images/coordinate_systems.png" />
 <p><strong>Realsense can also support SLAM and navigation, see</strong> <a class="reference external" href="https://yechun1.github.io/robot_devkit/rs_for_slam_nav">here</a><strong>.</strong></p>
 <img alt="../_images/ros2_rviz.png" src="../_images/ros2_rviz.png" />
 </div>

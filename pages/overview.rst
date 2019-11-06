@@ -2,9 +2,10 @@ Overview
 ==========
 
 Intel® Robot DevKit (RDK) Project contains robotics related open source software
-components under ROS2 framework for realsense based perceptual
+components under ROS2 framework for RealSense based perceptual
 computation, neuron network based object and people face detection,
-object tracking and 3D localization, SLAM and navigation.
+object tracking and 3D localization, SLAM, navigation, visual manipulation for industry
+robot, and a bunch of tools for development and debugging.
 
 Key Packages
 ----------------
@@ -66,9 +67,25 @@ plan to reach the goal, and outputs commands to autonomously drive the
 robot, respecting any safety constraints and avoiding obstacles
 encountered along the way.
 
+`ros2_grasp_library <https://github.com/intel/ros2_grasp_library>`_
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ROS2 Grasp Library enables state-of-the-art CNN based deep learning grasp 
+detection algorithms on ROS2 for visual based industrial robot manipulation.
+
+`tools <https://github.com/intel/robot_devkit_src>`_
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+To facilitate the development work, several tools are provided, including 
+`rtmonitor`_ to monitor and capture real time performance metrics of ROS2 C++ Application, 
+and `rdk_perf`_ to measure ROS2 topics and show result in rqt at run time.
+
 Reference
 ---------
 
 Intel® ROS Projects: http://wiki.ros.org/IntelROSProject
 
 Intel® ROS2 Projects: https://index.ros.org/doc/ros2/Related-Projects/Intel-ROS2-Projects/
+
+.. _rtmonitor: https://github.com/intel/robot_devkit_src/tree/master/tools/rtmonitor
+.. _rdk_perf: https://github.com/intel/robot_devkit_src/tree/master/tools/rdk_perf

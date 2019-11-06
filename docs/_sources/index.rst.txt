@@ -42,5 +42,7 @@ Contents:
     pages/slam
     pages/navigation
     pages/rs_slam
+    pages/grasp_lib
+    pages/tools
     pages/lic
 

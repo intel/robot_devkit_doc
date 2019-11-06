@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview &mdash; Intel ROS Tutorial 0.2.0 documentation</title>
+  <title>Overview &mdash; Intel ROS Tutorial 0.3.0 documentation</title>
   
 
   
@@ -23,7 +23,7 @@
       <script type="text/javascript">
           var DOCUMENTATION_OPTIONS = {
               URL_ROOT:'../',
-              VERSION:'0.2.0',
+              VERSION:'0.3.0',
               LANGUAGE:'None',
               COLLAPSE_INDEX:false,
               FILE_SUFFIX:'.html',
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.3.0
               </div>
             
           
@@ -101,18 +101,22 @@
 <li class="toctree-l3"><a class="reference internal" href="#id2">ros2_object_analytics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">ros2_openvino_toolkit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">navigation2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">ros2_grasp_library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">tools</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rs.html">Intel® RealSense™</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rs.html">RealSense™ Camera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vino.html">OpenVINO™ Toolkit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oa.html">Object Analytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM with Lidar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rs_slam.html">RealSense™ for SLAM and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_lib.html">Grasp Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lic.html">Copyright 2018 Intel® Corporation</a></li>
 </ul>
 
@@ -181,9 +185,10 @@
   <div class="section" id="overview">
 <h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>Intel® Robot DevKit (RDK) Project contains robotics related open source software
-components under ROS2 framework for realsense based perceptual
+components under ROS2 framework for RealSense based perceptual
 computation, neuron network based object and people face detection,
-object tracking and 3D localization, SLAM and navigation.</p>
+object tracking and 3D localization, SLAM, navigation, visual manipulation for industry
+robot, and a bunch of tools for development and debugging.</p>
 <div class="section" id="key-packages">
 <h2>Key Packages<a class="headerlink" href="#key-packages" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
@@ -231,6 +236,17 @@ a goal, such as a destination pose, the navigation system generates a
 plan to reach the goal, and outputs commands to autonomously drive the
 robot, respecting any safety constraints and avoiding obstacles
 encountered along the way.</p>
+</div>
+<div class="section" id="id5">
+<h3><a class="reference external" href="https://github.com/intel/ros2_grasp_library">ros2_grasp_library</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>ROS2 Grasp Library enables state-of-the-art CNN based deep learning grasp
+detection algorithms on ROS2 for visual based industrial robot manipulation.</p>
+</div>
+<div class="section" id="id6">
+<h3><a class="reference external" href="https://github.com/intel/robot_devkit_src">tools</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>To facilitate the development work, several tools are provided, including
+<a class="reference external" href="https://github.com/intel/robot_devkit_src/tree/master/tools/rtmonitor">rtmonitor</a> to monitor and capture real time performance metrics of ROS2 C++ Application,
+and <a class="reference external" href="https://github.com/intel/robot_devkit_src/tree/master/tools/rdk_perf">rdk_perf</a> to measure ROS2 topics and show result in rqt at run time.</p>
 </div>
 </div>
 <div class="section" id="reference">

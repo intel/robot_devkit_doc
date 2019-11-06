@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RealSense™ for SLAM and Navigation &mdash; Intel ROS Tutorial 0.2.0 documentation</title>
+  <title>RealSense™ for SLAM and Navigation &mdash; Intel ROS Tutorial 0.3.0 documentation</title>
   
 
   
@@ -23,7 +23,7 @@
       <script type="text/javascript">
           var DOCUMENTATION_OPTIONS = {
               URL_ROOT:'../',
-              VERSION:'0.2.0',
+              VERSION:'0.3.0',
               LANGUAGE:'None',
               COLLAPSE_INDEX:false,
               FILE_SUFFIX:'.html',
@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Copyright 2018 Intel® Corporation" href="lic.html" />
+    <link rel="next" title="Grasp Library" href="grasp_lib.html" />
     <link rel="prev" title="Navigation2" href="navigation.html" /> 
 </head>
 
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.3.0
               </div>
             
           
@@ -97,7 +97,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rs.html">Intel® RealSense™</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rs.html">RealSense™ Camera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vino.html">OpenVINO™ Toolkit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oa.html">Object Analytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM with Lidar</a></li>
@@ -109,6 +109,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#known-issues">4. Known issues</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="grasp_lib.html">Grasp Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lic.html">Copyright 2018 Intel® Corporation</a></li>
 </ul>
 
@@ -246,7 +248,7 @@ ros2 launch nav2_bringup nav2_bringup_launch.py map:=$HOME/map.yaml
 
 # In terminal 4
 source /opt/ros/dashing/local_setup.bash
-ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launch/nav2_default_view.rviz
+ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/launch/nav2_default_view.rviz
 </pre></div>
 </div>
 <p>Finally, please give an initial pose and goal within RVIZ2 to direct and navigate the turtlebot3 with the running map.</p>
@@ -267,7 +269,7 @@ ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launc
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="lic.html" class="btn btn-neutral float-right" title="Copyright 2018 Intel® Corporation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="grasp_lib.html" class="btn btn-neutral float-right" title="Grasp Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="navigation.html" class="btn btn-neutral float-left" title="Navigation2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

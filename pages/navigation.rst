@@ -63,7 +63,7 @@ Example: See `turtlebot3_gazebo models`_ for details.
 .. code:: bash
 
     source /opt/robot_devkit/robot_devkit_setup.bash
-    source /ros/dashing/local_setup.bash
+    source /opt/ros/dashing/local_setup.bash
     # Launch the nav2 system
     ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True autostart:=True \
     map:=`ros2 pkg prefix turtlebot3_navigation2`/map/map.yaml
