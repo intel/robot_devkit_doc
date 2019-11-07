@@ -42,7 +42,7 @@ Example: See `turtlebot3_gazebo models`_ for details.
 .. code:: bash
 
    source /opt/robot_devkit/robot_devkit_setup.bash
-   echo export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:`ros2 pkg prefix turtlebot3_gazebo`/models/ >> ~/.bashrc
+   echo export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:`ros2 pkg prefix turtlebot3_gazebo`/share/turtlebot3_gazebo/models/ >> ~/.bashrc
    echo export TURTLEBOT3_MODEL=waffle >> ~/.bashrc
    echo ROS_DOMAIN_ID=30 >> ~/.bashrc
 
@@ -66,7 +66,7 @@ Example: See `turtlebot3_gazebo models`_ for details.
     source /opt/ros/dashing/local_setup.bash
     # Launch the nav2 system
     ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True autostart:=True \
-    map:=`ros2 pkg prefix turtlebot3_navigation2`/map/map.yaml
+    map:=`ros2 pkg prefix turtlebot3_navigation2`/share/turtlebot3_navigation2/map/map.yaml
 
 .. note::
 
@@ -113,7 +113,7 @@ Pre-requisites:
 
 .. code:: bash
 
-   ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/launch/nav2_default_view.rviz
+   ros2 run rviz2 rviz2 -d $(ros2 pkg prefix nav2_bringup)/share/nav2_bringup/launch/nav2_default_view.rviz
 
 **In RVIZ2:**
 

@@ -20,21 +20,11 @@
   <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'../',
-              VERSION:'0.3.0',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -392,7 +382,7 @@
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>source enviroment</p>
-<div class="code bash last highlight-default"><div class="highlight"><pre><span></span>source /opt/intel/openvino/bin/setupvars.sh
+<div class="code bash last highlight-default notranslate"><div class="highlight"><pre><span></span>source /opt/intel/openvino/bin/setupvars.sh
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/openvino/deployment_tools/inference_engine/samples/build/intel64/Release/lib
 </pre></div>
 </div>
@@ -400,50 +390,50 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/openvino/deployment_tools/inf
 <ul class="simple">
 <li>run face detection sample code input from StandardCamera.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_people</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_people</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>run face detection sample code input from Image.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_image</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_image</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>run object segmentation sample code input from RealSenseCameraTopic.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">realsense_examples</span> <span class="n">rs_camera</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">realsense_examples</span> <span class="n">rs_camera</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 <span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_segmentation</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>run object segmentation sample code input from Video.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_video</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_video</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>run person reidentification sample code input from StandardCamera.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_reidentification</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_reidentification</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>run face reidentification sample code input from RealSenseCamera.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_face_reidentification</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_face_reidentification</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>run vehicle detection sample code input from StandardCamera.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_vehicle_detection</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">pipeline_vehicle_detection</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li>run multiple pipeline of object detection sample code input from StandardCamera and RealSenseCamera.</li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">multi_pipeline_service</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">multi_pipeline_service</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <ul>
@@ -451,11 +441,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/openvino/deployment_tools/inf
 <p>Run image processing service:</p>
 </li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">image_object_server</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">image_object_server</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>Run example application with an absolute path of an image on another console:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span>ros2 run dynamic_vino_sample image_object_client `ros2 pkg prefix ros2_openvino_toolkit`/share/ros2_openvino_toolkit/data/images/car.png
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>ros2 run dynamic_vino_sample image_object_client `ros2 pkg prefix ros2_openvino_toolkit`/share/ros2_openvino_toolkit/data/images/car.png
 </pre></div>
 </div>
 <ul>
@@ -463,11 +453,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/intel/openvino/deployment_tools/inf
 <p>Run image processing service:</p>
 </li>
 </ul>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">image_people_server</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">dynamic_vino_sample</span> <span class="n">image_people_server</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>Run example application with an absolute path of an image on another console:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span>ros2 run dynamic_vino_sample image_people_client `ros2 pkg prefix ros2_openvino_toolkit`/share/ros2_openvino_toolkit/data/images/team.png
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span>ros2 run dynamic_vino_sample image_people_client `ros2 pkg prefix ros2_openvino_toolkit`/share/ros2_openvino_toolkit/data/images/team.png
 </pre></div>
 </div>
 <div class="section" id="demo-result-snapshots">
